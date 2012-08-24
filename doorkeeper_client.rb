@@ -34,7 +34,7 @@ class DoorkeeperClient < Sinatra::Base
     OAuth2::Client.new(
       ENV['OAUTH2_CLIENT_ID'],
       ENV['OAUTH2_CLIENT_SECRET'],
-      :site         => ENV['SITE'] || "http://doorkeeper-provider.herokuapp.com",
+      :site         => ENV['SITE'],
       :token_method => token_method,
     )
   end
@@ -52,8 +52,8 @@ class DoorkeeperClient < Sinatra::Base
   end
 
   get '/sign_in' do
-    scope = params[:scope] || "public"
-    redirect client.auth_code.authorize_url(:redirect_uri => redirect_uri, :scope => scope)
+    scope = params[:scope] ||= "public"
+    redirect client.auth_code.authorize_url(:redirect_uri => redirect_uri)
   end
 
   get '/sign_out' do
