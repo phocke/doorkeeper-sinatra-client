@@ -26,7 +26,7 @@ If you have your own provider or you are using [this example](http://doorkeeper-
 
 You just need to 
 
-		mv env.rb.example to env.rb
+	mv env.rb.example  env.rb
 
 If you use seed.rb in ideonetapp they will work together, as the app secret and app id are the same. 
 
