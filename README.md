@@ -34,4 +34,4 @@ If you use seed.rb in ideonetapp they will work together, as the app secret and 
 
 Fire up the server with:
 
-    rackup config.ru
+    rackup config.ru -p 9292
