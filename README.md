@@ -24,19 +24,11 @@ If you have your own provider or you are using [this example](http://doorkeeper-
 
 ### Environment variables
 
-You need to setup few environment variables in order to make the client work. You can either set the variables in you environment:
+You just need to 
 
-    export OAUTH2_CLIENT_ID           = "129477f..."
-    export OAUTH2_CLIENT_SECRET       = "c1eec90..."
-    export OAUTH2_CLIENT_REDIRECT_URI = "http://localhost:9393/callback"
+		mv env.rb.example to env.rb
 
-
-or set them in a file named `env.rb` in the app's root. This file is loaded automatically by the app.
-
-    # env.rb
-    ENV['OAUTH2_CLIENT_ID']           = "129477f..."
-    ENV['OAUTH2_CLIENT_SECRET']       = "c1eec90..."
-    ENV['OAUTH2_CLIENT_REDIRECT_URI'] = "http://localhost:9393/callback"
+If you use seed.rb in ideonetapp they will work together, as the app secret and app id are the same. 
 
 ## Start the server
 
